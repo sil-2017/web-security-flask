@@ -1,12 +1,8 @@
 # from flask import Flask, render_template
 from flask import Flask, render_template
-from flask import Flask, render_template, url_for
-# ... այլ ներմուծումներ ...
 
-# ԿԱՐԵՎՈՐ ՓՈՓՈԽՈՒԹՅՈՒՆԸ ԱՅՍՏԵՂ Է
-app = Flask(__name__, 
-            static_folder='static',
-            template_folder='templates') # Նշում ենք, որ 'dist'-ը սպասարկելու է որպես 'static'
+app = Flask(__name__)
+
 
 SITE_CONTENT = {
     'title': 'WEB security',

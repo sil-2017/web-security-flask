@@ -1,6 +1,3 @@
 # Flask framework-ը, որը դուք օգտագործում եք app.py-ում
 Flask
-
-# Gunicorn-ը (Green Unicorn) արտադրական (production) WSGI HTTP սերվեր է,
-# որն անհրաժեշտ է Heroku-ի նման դինամիկ հարթակներում Flask-ը գործարկելու համար։
 gunicorn
