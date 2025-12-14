@@ -1,0 +1,409 @@
+@charset "UTF-8";
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #101111;
+  color: #0c0c0c;
+}
+
+header {
+  background-image: url(../../static/img/bg.jpg);
+  color: rgb(244, 252, 242);
+  font-weight: 700;
+  font-display: optional;
+  padding: 10px;
+  text-align: center;
+  text-shadow: -12px 4px 2px rgba(7, 138, 20, 0.6);
+}
+header h1 {
+  margin-bottom: 5px;
+}
+
+main {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #ffffff;
+  color: #000;
+  font-weight: 700;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 2px 2px 4px #E9F4FF;
+}
+.card h2 {
+  color: #575858;
+  border-bottom: 2px solid rgb(13, 145, 39);
+  box-shadow: 0 1px black;
+  box-shadow: inset;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+.card article {
+  margin-top: 15px;
+}
+.card ul {
+  list-style-type: "👉 ";
+  padding-left: 20px;
+}
+.card button {
+  box-shadow: 2px 2px 4px #E9F4FF;
+  text-shadow: 1px 1px 1px black;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #807d7d;
+  color: #333;
+  bottom: 0;
+  width: 100%;
+  text-shadow: 2px 2px 4px #42f41e;
+  font-weight: 600;
+}
+
+.open-modal-btn {
+  color: black;
+  font-weight: 800;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  border: 2px #000000 solid;
+  background: transparent;
+}
+.open-modal-btn:hover {
+  box-shadow: 3px 3px 7px black;
+  text-shadow: none;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #000;
+}
+.modal h4 {
+  color: #000;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px #060606;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 30px;
+  border: 1px solid #888;
+  width: 80%;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  color: #000;
+  font-weight: 700;
+}
+.modal-content h3 {
+  color: #575858;
+  text-shadow: 1px 1px 2px #060606;
+}
+
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close-btn:hover, .close-btn:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mrg {
+  margin-bottom: 80px;
+}
+
+.step-slider-container {
+  position: relative;
+  padding: 20px;
+  margin: 20px auto;
+  border: 1px dashed #c3f2f2;
+  border-radius: 6px;
+  min-height: 200px;
+  overflow: hidden;
+}
+
+.auth-step {
+  display: none;
+  padding: 0 40px;
+  text-align: center;
+}
+.auth-step h3 {
+  color: #575858;
+}
+.auth-step img {
+  min-width: 150px;
+  max-width: 250px;
+}
+
+.current-step {
+  display: block;
+}
+
+.step-icon {
+  font-size: 4em;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.prev-step, .next-step {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 10px;
+  margin-top: -30px;
+  color: #575858;
+  font-weight: bold;
+  font-size: 25px;
+  user-select: none;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.next-step {
+  right: 10px;
+}
+
+.prev-step {
+  left: 10px;
+}
+
+.prev-step:hover, .next-step:hover {
+  background-color: #c3f2f2;
+  color: white;
+}
+
+/* ========================================= */
+/* Media Queries  */
+/* ========================================= */
+@media (max-width: 768px) {
+  main {
+    padding: 10px;
+  }
+  .card {
+    padding: 15px;
+  }
+  header h1 {
+    font-size: 1.8em;
+  }
+  header p {
+    font-size: 0.9em;
+  }
+  .modal-content {
+    width: 95%;
+    margin: 5% auto;
+    max-height: 90vh;
+  }
+  /* -------------------------------------- */
+  /* 2FA Քայլերի Անիմացիոն Բաժին */
+  /* -------------------------------------- */
+  .step-slider-container {
+    padding: 10px;
+  }
+  .step-icon {
+    font-size: 3em; /* Փոքրացնել էմոջիի չափսը */
+  }
+  .prev-step, .next-step {
+    font-size: 20px;
+    padding: 8px;
+    margin-top: -25px;
+  }
+  /* -------------------------------------- */
+  /* Ֆիշինգի/Վեբ-Հիմունքների Մոդալի Կոճակներ */
+  /* -------------------------------------- */
+  .open-modal-btn {
+    width: 100%;
+    display: block;
+    margin-top: 15px;
+  }
+}
+@media (max-width: 480px) {
+  body {
+    font-size: 0.9em;
+  }
+  .card h2 {
+    font-size: 1.3em;
+  }
+  footer {
+    font-size: 0.8em;
+  }
+}
+@media (max-width: 768px) {
+  .modal-content {
+    width: 90%;
+    padding: 20px;
+    margin: 5% auto;
+    max-width: 90vw;
+    max-height: 90vh;
+  }
+  .modal-content h3 {
+    font-size: 1.2em;
+  }
+}
+@media (max-width: 480px) {
+  .modal-content {
+    width: 95%;
+    padding: 15px;
+    overflow: hidden;
+    padding-right: 15px;
+  }
+  .close-btn {
+    font-size: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .prev-step, .next-step {
+    font-size: 20px;
+    padding: 8px;
+    margin-top: -30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 4px;
+  }
+  .auth-step {
+    padding: 0 40px;
+  }
+  .step-icon {
+    font-size: 3em;
+  }
+}
+@media (max-width: 480px) {
+  .prev-step, .next-step {
+    font-size: 18px;
+    padding: 6px 8px;
+    top: 45%;
+    margin-top: -20px;
+  }
+}
+@media (max-width: 768px) {
+  .auth-step.current-step {
+    display: block !important;
+  }
+}
+@media (max-width: 480px) {
+  .step-slider-container {
+    padding: 10px;
+    width: 100%;
+    min-height: 180px;
+    box-sizing: border-box;
+  }
+  .auth-step {
+    padding: 0 15px;
+  }
+  .prev-step, .next-step {
+    font-size: 16px;
+    padding: 5px 7px;
+    top: 50%;
+    margin-top: -15px;
+  }
+  .auth-step.current-step {
+    display: block !important;
+  }
+  .modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 30px;
+    width: 80%;
+    max-width: 700px;
+    max-height: 80vh;
+    overflow-y: auto;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  .modal-content h3 {
+    color: #575858;
+  }
+}
+span {
+  display: block;
+}
+
+/* ------------------ 2FA Քայլերի Կառավարում ------------------ */
+.step-slider-container {
+  position: relative;
+  padding: 20px;
+  margin: 20px auto;
+  border: 1px dashed #c3f2f2;
+  border-radius: 6px;
+  min-height: 200px; /* Որպեսզի բարձրությունը չթռվռա */
+  overflow: hidden;
+}
+
+.auth-step {
+  display: none; /* Թաքցնել բոլոր քայլերը JS-ով կառավարելու համար */
+  padding: 0 40px; /* Տեղ թողնել սլաքների համար */
+  text-align: center;
+}
+.auth-step h3 {
+  color: #575858;
+}
+
+.current-step {
+  display: block; /* Միայն այս քայլն է ցուցադրվում */
+}
+
+.step-icon {
+  font-size: 4em;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Սլաքների ոճերը (նման նախորդ օրինակին) */
+.prev-step, .next-step {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 10px;
+  margin-top: -30px;
+  color: #575858;
+  font-weight: bold;
+  font-size: 25px;
+  user-select: none;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.next-step {
+  right: 10px;
+}
+
+.prev-step {
+  left: 10px;
+}
+
+.prev-step:hover, .next-step:hover {
+  background-color: #c3f2f2;
+  color: white;
+}
+/*# sourceMappingURL=main.css.map */

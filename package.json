@@ -1,0 +1,25 @@
+{
+  "name": "web-security-site",
+  "version": "1.0.0",
+  "description": "Token, Cookie, Session, 2FA, and OSINT website.",
+  "main": "gulpfile.js",
+ 
+  "scripts": {
+  "build": "gulp build",
+  "postinstall": "npm run build" },
+  "keywords": [
+    "gulp",
+    "scss",
+    "web",
+    "security"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.10",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.54.5"
+  }
+}

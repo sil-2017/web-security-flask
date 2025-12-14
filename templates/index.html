@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ content.title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <header>
+        <h1>{{ content.header }}</h1>
+        <p>{{ content.intro }}</p>
+    </header>
+
+    <main>
+        <section id="password" class="card example-2 inner">
+            <h2>🔑 Ստեղծեք բարդ գաղտնաբառեր</h2>
+            <p>Ուժեղ Գաղտնաբառը լրացուցիչ անվտանգության շերտ է։</p>
+            <button class="open-modal-btn" data-modal-id="modal-password">Իմանալ Ավելին</button>
+        </section>
+
+    <section id="2fa" class="card">
+        <h2>🛡️ {{ content.security.name }}</h2>
+        <p>{{ content.security.short_desc }}</p>
+        <button class="open-modal-btn" data-modal-id="modal-{{ content.security.id }}">Ավելի Մանրամասն</button>
+    </section>
+
+       <section id="osint" class="card">
+        <h2>🕵️ {{ content.osint_info.name }}</h2>
+        <p>{{ content.osint_info.short_desc }}</p>
+
+        <button class="open-modal-btn" data-modal-id="modal-{{ content.osint_info.id }}">Ամբողջական Վերլուծություն</button>
+    </section>
+    <section id="phishing" class="card">
+        <h2>{{ content.phishing_info.name }}</h2>
+        <p>{{ content.phishing_info.short_desc }}</p>
+
+        <button class="open-modal-btn" data-modal-id="modal-{{ content.phishing_info.id }}">Իմանալ Ֆիշինգի Մասին</button>
+    </section>
+
+ <section id="basics" class="card">
+        <h2>💻 Վեբ Տեխնոլոգիաների Հիմունքներ</h2>
+
+        {% for item in content.basics %}
+        <article>
+            <h3>{{ item.name }}</h3>
+            <p>{{ item.desc }}</p>
+            <button class="open-modal-btn" data-modal-id="modal-{{ item.id }}">Իմանալ Ավելին</button> 
+        </article>
+        {% endfor %}
+    </section>
+    
+    </main>
+    {% for item in content.basics %}
+        <div id="modal-{{ item.id }}" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h3>{{ item.name }} - Մանրամասներ</h3>
+                <p>{{ item.details | safe }}</p> 
+            </div>
+        </div>
+    {% endfor %}
+    <div id="modal-{{ content.security.id }}" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <p>{{ content.security.details | safe }}</p>
+        </div>
+    </div>
+     <div id="modal-{{ content.pass.id }}" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <p>{{ content.pass.details | safe }}</p>
+        </div>
+    </div>
+
+   <div id="modal-{{ content.phishing_info.id }}" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <p>{{ content.phishing_info.details | safe }}</p>
+    </div>
+</div>
+  
+    <div id="modal-{{ content.osint_info.id }}" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <p>{{ content.osint_info.details | safe }}</p>
+        </div>
+    </div>
+        {% for item in content.basics %}
+        <div id="modal-{{ item.id }}" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h3>{{ item.name }} - Մանրամասներ</h3>
+                <p>{{ item.details }}</p>
+            </div>
+        </div>
+        {% endfor %}
+        
+        
+    <script src="{{ url_for('static', filename='js/modal.js') }}"></script>
+    <!-- <script src="{{ url_for('static', filename='js/modal.js') }}"></script> -->
+    <footer>
+        <p>&copy; 2025 Անվտանգության Ուսումնական Կայք</p>
+    </footer>
+    ```
+
+
+</body>
+</html>
