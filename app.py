@@ -142,12 +142,13 @@ SITE_CONTENT = {
                     </div>
                     <div class="auth-step current-step">
                         <img src="{{ url_for('static', filename='img/fb6.jpg') }}">
+                        
                     </div>
                     <div class="auth-step current-step"> 
                         <img src="{{ url_for('static', filename='img/fb3.jpg') }}">         
                     </div>
                     <div class="auth-step current-step">  
-                        <img src="{{ url_for('static', filename='Img/fb7.jpg') }}">  
+                        <img src="{{ url_for('static', filename='img/fb7.jpg') }}">  
                     </div>
                     
                     
