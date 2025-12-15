@@ -134,48 +134,47 @@ SITE_CONTENT = {
                     <div class="auth-step current-step">
                         <h3>1. Միացում</h3>
                         <p>Մուտք գործեք Ձեր հաշվի անվտանգության կարգավորումներ և միացրեք 2FA-ն։</p>
-                        <img src="{{ url_for('static', filename='img/fb5.jpg') }}">
+                      
+                        <img src="static/img/fb5.jpg">
                     </div>
                     <div class="auth-step current-step">
-                        <img src="{{ url_for('static', filename='img/fb6.jpg') }}">
+                    <img src="static/img/fb6.jpg">
                         
                     </div>
                     <div class="auth-step current-step"> 
-                        <img src="{{ url_for('static', filename='img/fb3.jpg') }}">         
+                        <img src="static/img/fb3.jpg">        
                     </div>
                     <div class="auth-step current-step">  
-                        <img src="{{ url_for('static', filename='img/fb7.jpg') }}">  
+                     <img src="static/img/fb7.jpg"> 
                     </div>
                     
                     
                     <div class="auth-step">
                         <h3>2. Գործոնի Ընտրություն</h3>
                         <p>Ընտրեք հաստատման եղանակը (Authenticator App, SMS կամ Security Key)։</p>
-                       
-                        <img src="{{ url_for('static', filename='img/fb2.jpg') }}">
+                        <img src="static/img/fb2.jpg">
                     </div>
                     
                     <div class="auth-step">
                         <h3>3. Նույնականացում</h3>
                         <p>Մուտք գործելու ժամանակ մուտքագրեք գաղտնաբառը և հեռախոսով ստացված կոդը։</p>
-                   
-                    <img src="{{ url_for('static', filename='img/fb8.jpg') }}">
+                     <img src="static/img/fb8.jpg">
                     </div>
                     <div class="auth-step">
                         <h3>3. Նույնականացում</h3>
-                        <img src="{{ url_for('static', filename='img/fb4.jpg') }}">
+                         <img src="static/img/fb4.jpg"> 
                     </div>
                     <div class="auth-step">
                         <h3>3. Նույնականացում</h3>
-                        <img src="{{ url_for('static', filename='img/fb1.jpg') }}"> 
+                         <img src="static/img/fb1.jpg"> 
                     </div>
                     <div class="auth-step">
                         <h3>3. Նույնականացում</h3>
-                        <img src="{{ url_for('static', filename='img/fb9.jpg') }}">
+                         <img src="static/img/fb9.jpg"> 
                     </div>
                     <div class="auth-step">
-                        <h3>Gmail/Google Steps</h3>  
-                        <img src="{{ url_for('static', filename='img/n1.png') }}">
+                        <h3>Gmail/Google Steps</h3> 
+                         <img src="static/img/n1.png"> 
                     </div>
                 </div>
                 
